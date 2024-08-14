@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="select.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <h3>CREATE ACCOUNT</h3>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="confirm password" required>
+
+            <div class="btn">
+                <button type="button" id="next1">next</button>
+            </div>
+
+        </form>
+        <form id="form2">
+            <h3>SOCIAL LINK</h3>
+            <input type="text" placeholder="facebook" required>
+            <input type="text" placeholder="instagram" required>
+            <input type="text" placeholder="whatsapp" required>
+
+            <div class="btn">
+                <button type="button" id="back1"> back</button>
+                <button type="button" id="next2">next</button>
+            </div>
+
+        </form>
+        <form id="form3">
+            <h3>PERSONAL INFORMATION</h3>
+            <input type="text" placeholder="firstname" required>
+            <input type="text" placeholder="secondname" required>
+            <input type="tetx" placeholder="phone number" required>
+
+            <div class="btn">
+                <button type="button" id="back2">back</button>
+                <button type="button">submit</button>
+            </div>
+        </form>
+        <div class="step-row">
+            <div id="prog"></div> 
+            <div class="step-row-col"><small>step 1</small></div>
+            <div class="step-row-col"><small>step 2</small></div>
+            <div class="step-row-col"><small>step 3</small></div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+    var form1 = document.getElementById("form1");
+    var form2 = document.getElementById("form2");
+    var form3 = document.getElementById("form3");
+
+    var next1 = document.getElementById("next1");
+    var next2 = document.getElementById("next2");
+    var back1 = document.getElementById("back1");
+    var back2 = document.getElementById("back2");
+
+    var prog = document.getElementById("prog");
+
+
+
+    next1.onclick = function(){
+        form1.style.left = "-450px";
+        form2.style.left = "40px"
+        prog.style.width = "240px";
+    }
+    back1.onclick = function(){
+        form1.style.left = "40px";
+        form2.style.left = "450px";
+        prog.style.width = "120px";
+    }
+    next2.onclick = function(){
+        form2.style.left = "-450px";
+        form3.style.left = "40px";
+        prog.style.width = "360px";
+    }
+    back2.onclick = function(){
+        form2.style.left = "40px";
+        form3.style.left = "450px";
+        prog.style.width = "240px";
+    }
+
+    </script>
+
+</body>
+</html>
